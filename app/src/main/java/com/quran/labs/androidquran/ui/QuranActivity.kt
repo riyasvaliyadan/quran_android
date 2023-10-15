@@ -82,18 +82,12 @@ class QuranActivity : AppCompatActivity(),
   private val compositeDisposable = CompositeDisposable()
   lateinit var latestPageObservable: Observable<Int>
 
-  @Inject
-  lateinit var settings: QuranSettings
-  @Inject
-  lateinit var audioUtils: AudioUtils
-  @Inject
-  lateinit var recentPageModel: RecentPageModel
-  @Inject
-  lateinit var translationManagerPresenter: TranslationManagerPresenter
-  @Inject
-  lateinit var quranIndexEventLogger: QuranIndexEventLogger
-  @Inject
-  lateinit var extraScreens: Set<@JvmSuppressWildcards ExtraScreenProvider>
+  @Inject lateinit var settings: QuranSettings
+  @Inject lateinit var audioUtils: AudioUtils
+  @Inject lateinit var recentPageModel: RecentPageModel
+  @Inject lateinit var translationManagerPresenter: TranslationManagerPresenter
+  @Inject lateinit var quranIndexEventLogger: QuranIndexEventLogger
+  @Inject lateinit var extraScreens: Set<@JvmSuppressWildcards ExtraScreenProvider>
 
   public override fun onCreate(savedInstanceState: Bundle?) {
     val quranApp = application as QuranApplication
